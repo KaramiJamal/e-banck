@@ -22,7 +22,7 @@ export class AuthorizationGuard implements CanActivate {
     console.log(this.authService);
     if (
       this.authService.authenticated &&
-      route.data['role'].includes(this.authService.role)
+      this.authService.role!.includes(route.data['role'])
     ) {
       console.log('true {###########');
       return true;

@@ -1,6 +1,9 @@
 <div class="container mt-2">
   <div class="row">
-    <div class="col" [ngClass]="{ 'col-md-6': authService.role === 'ADMIN' }">
+    <div
+      class="col"
+      [ngClass]="{ 'col-md-6': authService.role === 'ADMIN USER' }"
+    >
       <div class="card">
         <div class="card-header">Accounts</div>
         <div class="card-body">
@@ -79,7 +82,7 @@
         </div>
       </div>
     </div>
-    <div class="col col-md-6" *ngIf="authService.role === 'ADMIN'">
+    <div class="col col-md-6" *ngIf="authService.role === 'ADMIN USER'">
       <div class="card" *ngIf="accountObservable">
         <div class="card-header">Operations</div>
         <div class="card-body">
